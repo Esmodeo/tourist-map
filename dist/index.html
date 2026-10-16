@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Prata&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIINfQ3ynh5P+byw27JmKzBvAFyrHrmq7kI=" crossorigin="" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -52,7 +53,7 @@
 
     <section class="map-section" aria-label="Карта туристичних об’єктів">
       <div id="map" class="map"></div>
-      <div class="map-badge"><span></span> Деморежим карти</div>
+      <div class="map-badge"><span></span> OpenStreetMap</div>
       <div class="zoom-controls" aria-label="Масштаб карти">
         <button id="zoomIn" aria-label="Збільшити">+</button><button id="zoomOut" aria-label="Зменшити">−</button>
       </div>
@@ -96,6 +97,7 @@
     <p class="notice">Години роботи, ціни й умови доступу можуть змінюватися. Перед поїздкою перевіряйте офіційні джерела.</p>
   </dialog>
 
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script src="app.js"></script>
 </body>
 </html>
