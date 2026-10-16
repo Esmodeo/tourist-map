@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="anonymous" />
-  <link rel="stylesheet" href="styles.css?v=20261016-3" />
+  <link rel="stylesheet" href="styles.css?v=20261016-4" />
 </head>
 <body>
   <header class="topbar">
@@ -23,6 +23,10 @@
       <button class="about-btn" id="aboutBtn">Про проєкт</button>
     </div>
   </header>
+
+  <nav class="category-bar" aria-label="Фільтр за категоріями">
+    <div class="filter-row" id="filters"></div>
+  </nav>
 
   <main class="app-shell">
     <aside class="sidebar" id="sidebar">
@@ -37,8 +41,6 @@
         <input id="searchInput" type="search" placeholder="Пошук за назвою" autocomplete="off" aria-label="Пошук за назвою" />
         <button id="clearSearch" aria-label="Очистити пошук">×</button>
       </div>
-
-      <div class="filter-row" id="filters" aria-label="Категорії"></div>
 
       <div class="results-head">
         <strong id="resultCount">18 місць</strong>
