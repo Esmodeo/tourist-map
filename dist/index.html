@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f3efe7" />
+  <meta name="description" content="Інтерактивна туристична мапа Кам’янця-Подільського" />
+  <title>Кам’янець — туристична мапа</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Prata&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="На головну">
+      <span class="brand-mark">КП</span>
+      <span><strong>КАМ’ЯНЕЦЬ</strong><small>туристична мапа</small></span>
+    </a>
+    <div class="top-actions">
+      <button class="icon-btn" id="locateBtn" aria-label="Моє місцеперебування" title="Моє місцеперебування">◎</button>
+      <button class="about-btn" id="aboutBtn">Про проєкт</button>
+    </div>
+  </header>
+
+  <main class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="intro">
+        <div class="eyebrow">Відкривайте місто</div>
+        <h1>Місця, що варто <em>побачити</em></h1>
+        <p>Перевірена базова інформація про пам’ятки, музеї та краєвиди Кам’янця-Подільського.</p>
+      </div>
+
+      <div class="search-wrap">
+        <span aria-hidden="true">⌕</span>
+        <input id="searchInput" type="search" placeholder="Пошук за назвою" autocomplete="off" aria-label="Пошук за назвою" />
+        <button id="clearSearch" aria-label="Очистити пошук">×</button>
+      </div>
+
+      <div class="filter-row" id="filters" aria-label="Категорії"></div>
+
+      <div class="results-head">
+        <strong id="resultCount">18 місць</strong>
+        <button id="resetBtn">Скинути</button>
+      </div>
+      <div class="place-list" id="placeList"></div>
+      <div class="empty-state" id="emptyState" hidden>
+        <span>⌕</span><h2>Нічого не знайдено</h2><p>Спробуйте іншу назву або скиньте фільтри.</p>
+        <button id="emptyReset">Показати всі місця</button>
+      </div>
+    </aside>
+
+    <section class="map-section" aria-label="Карта туристичних об’єктів">
+      <div id="map" class="map"></div>
+      <div class="map-badge"><span></span> Деморежим карти</div>
+      <div class="zoom-controls" aria-label="Масштаб карти">
+        <button id="zoomIn" aria-label="Збільшити">+</button><button id="zoomOut" aria-label="Зменшити">−</button>
+      </div>
+      <div class="map-legend" id="legend"></div>
+    </section>
+  </main>
+
+  <nav class="mobile-nav" aria-label="Режим перегляду">
+    <button class="active" data-view="map">⌖ <span>Карта</span></button>
+    <button data-view="list">☷ <span>Список</span></button>
+  </nav>
+
+  <div class="sheet-backdrop" id="backdrop"></div>
+  <article class="detail-sheet" id="detailSheet" role="dialog" aria-modal="true" aria-labelledby="detailTitle" hidden>
+    <button class="sheet-close" id="closeSheet" aria-label="Закрити">×</button>
+    <div class="sheet-image" id="detailImage"><span id="detailIcon"></span></div>
+    <div class="sheet-content">
+      <div class="category-label" id="detailCategory"></div>
+      <h2 id="detailTitle"></h2>
+      <p class="detail-description" id="detailDescription"></p>
+      <dl class="facts">
+        <div><dt>Розташування</dt><dd id="detailAddress"></dd></div>
+        <div><dt>Відвідування</dt><dd id="detailVisit"></dd></div>
+        <div><dt>Доступність</dt><dd id="detailAccess"></dd></div>
+        <div><dt>Актуальність</dt><dd id="detailUpdated"></dd></div>
+      </dl>
+      <div class="sheet-actions">
+        <a id="detailSource" target="_blank" rel="noreferrer">Офіційне джерело ↗</a>
+        <a id="googleLink" target="_blank" rel="noreferrer">Відкрити в Google Maps ↗</a>
+      </div>
+      <p class="photo-credit">Демонстраційне зображення: Unsplash</p>
+    </div>
+  </article>
+
+  <dialog id="aboutDialog">
+    <button id="closeAbout" aria-label="Закрити">×</button>
+    <div class="eyebrow">Про проєкт</div>
+    <h2>Місто ближче, ніж здається</h2>
+    <p>Це навчальний прототип туристичної мапи Кам’янця-Подільського. Він допомагає знайти цікаві місця та переглянути базову інформацію перед відвідуванням.</p>
+    <p class="notice">Години роботи, ціни й умови доступу можуть змінюватися. Перед поїздкою перевіряйте офіційні джерела.</p>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
