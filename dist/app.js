@@ -58,3 +58,4 @@ $('#aboutBtn').onclick=()=>$('#aboutDialog').showModal();$('#closeAbout').onclic
 document.querySelector('.mobile-nav').addEventListener('click',e=>{const b=e.target.closest('[data-view]');if(!b)return;document.querySelectorAll('.mobile-nav button').forEach(x=>x.classList.toggle('active',x===b));$('#sidebar').classList.toggle('mobile-active',b.dataset.view==='list');$('.map-section').classList.toggle('mobile-hidden',b.dataset.view==='list');if(b.dataset.view==='map')setTimeout(()=>map.invalidateSize(),50)});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!els.sheet.hidden)closePlace()});
 renderFilters();renderLegend();renderList();
+window.addEventListener('load',()=>setTimeout(locateUser,500),{once:true});
