@@ -16,3 +16,4 @@ body,button,input,.brand-mark,.intro h1,.place-card strong,.empty-state h2,.dist
 .detail-sheet{top:148px}@media(max-width:760px){.detail-sheet{top:auto}}
 .mobile-filter-caption{display:none}
 @media(max-width:760px){.category-bar{height:72px;flex-direction:column;justify-content:center}.category-bar .filter-row{height:48px;flex:0 0 48px}.mobile-filter-caption{display:block;height:18px;line-height:18px;margin-top:-2px;padding:0 12px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--muted);font-size:10px;font-weight:600;letter-spacing:.08em;text-align:center;text-transform:uppercase}.app-shell{height:calc(100vh - 194px)}.map-section,.sidebar{inset:136px 0 58px}}
+@media(max-width:760px){.category-bar .filter-row{justify-content:flex-start;overflow-x:auto;padding-inline:8px}.category-bar .filter{flex:0 0 42px}}
