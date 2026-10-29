@@ -44,7 +44,7 @@
       </div>
 
       <div class="results-head">
-        <strong id="resultCount">23 місця</strong>
+        <strong id="resultCount">19 місць</strong>
         <button id="resetBtn">Скинути</button>
       </div>
       <div class="place-list" id="placeList"></div>
@@ -79,8 +79,10 @@
       <h2 id="detailTitle"></h2>
       <p class="detail-description" id="detailDescription"></p>
       <dl class="facts">
-        <div><dt>Розташування</dt><dd id="detailAddress"></dd></div>
-        <div><dt>Відвідування</dt><dd id="detailVisit"></dd></div>
+          <div><dt>Розташування</dt><dd id="detailAddress"></dd></div>
+          <div><dt>Графік роботи</dt><dd id="detailSchedule"></dd></div>
+          <div><dt>Відвідування</dt><dd id="detailVisit"></dd></div>
+          <div id="contactFact" hidden><dt>Контакт</dt><dd id="detailContact"></dd></div>
         <div><dt>Доступність</dt><dd id="detailAccess"></dd></div>
         <div><dt>Актуальність</dt><dd id="detailUpdated"></dd></div>
       </dl>
@@ -101,6 +103,7 @@
   </dialog>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-  <script src="app.js?v=20261028-5"></script>
+  <script src="places.js?v=20261029-1"></script>
+  <script src="app.js?v=20261029-1"></script>
 </body>
 </html>
